@@ -38,21 +38,26 @@
       text-indent: 0;
     }
 
+    :root {
+      --hero-height: 320px;
+      --hero-radius: 18px;
+    }
+
     .header-image {
       margin: 10px auto 0;
-      width: 1280px;
-      max-width: calc(100% - 24px);
-      height: 300px;
+      width: 95vw;
+      max-width: 1800px;
+      height: var(--hero-height);
       background-image: url("NCUT.png");
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
-      border-radius: 18px;
+      border-radius: var(--hero-radius);
     }
 
     .main {
       position: relative;
-      margin-top: -298px;
+      margin-top: calc(var(--hero-height) * -0.8);
       display: flex;
       justify-content: center;
       gap: 24px;
@@ -289,25 +294,69 @@
       margin-top: 10px;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 1200px) {
+      :root { --hero-height: 280px; }
+      .header-image {
+        width: calc(100% - 24px);
+      }
       .main {
-        margin-top: -160px;
+        margin-top: calc(var(--hero-height) * -0.8);
+        gap: 16px;
+      }
+      .card {
+        width: 420px;
+        max-width: 95%;
       }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
+      :root { --hero-height: 240px; }
+      .main {
+        margin-top: calc(var(--hero-height) * -0.85);
+        flex-direction: column;
+        align-items: center;
+      }
+      .card {
+        width: 95%;
+        max-width: 480px;
+      }
+      .top-bar {
+        margin-top: 8px;
+        padding-right: 8px;
+      }
+      .lang-select {
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      :root { --hero-height: 200px; }
+      .top-bar {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 12px;
+      }
+      .lang-select {
+        min-width: 120px;
+      }
       .header-image {
-        height: 220px;
+        max-width: calc(100% - 12px);
       }
       .main {
-        margin-top: -140px;
+        margin-top: calc(var(--hero-height) * -0.85);
+        padding: 0 12px 40px;
       }
       .card {
         width: 100%;
-        max-width: 420px;
+        max-width: 100%;
+        padding: 22px 18px;
       }
-      .top-bar {
-        margin-top: 16px;
+      .login-card,
+      .notice-card {
+        min-height: auto;
+      }
+      .notice-content {
+        max-height: 360px;
       }
     }
   </style>
@@ -409,7 +458,7 @@
         <p>新版本將進行多項功能更新與資安強化，旨在為您提供更優質、更加安全的使用體驗。</p>
         <p>原有的單簽平台即將下線不再進行功能更新與維護。如有任何問題或建議，請隨時聯繫我們。</p>
         <p>國立勤益科技大學</p>
-        <p>駭客攻防社　04 23924505 #8725</p>
+        <p>駭客攻防社　04 23924505 #8722</p>
       </div>
     </div>
   </div>
@@ -508,3 +557,20 @@
   </script>
 </body>
 </html>
+    @media (min-width: 1400px) {
+      :root { --hero-height: 360px; }
+      .header-image {
+        width: 90vw;
+        max-width: 1900px;
+      }
+      .main {
+        margin-top: calc(var(--hero-height) * -0.72);
+        gap: 28px;
+      }
+      .login-card {
+        width: 460px;
+      }
+      .notice-card {
+        width: 500px;
+      }
+    }
