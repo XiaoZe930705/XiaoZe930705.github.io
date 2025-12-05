@@ -2,26 +2,11 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
-  <title>駭客攻防社釣魚網站練習</title>
+  <title>駭客攻防社釣魚網站教學</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-</head>
-<body>
-  <div class="container">
-    <h1>登入成功(身為駭客攻防社的社員 你必須擁有資安意識!!)</h1>
-    <h2`>本頁面不會記錄輸入的密碼資料，所有操作都是為了提升社員資安意識，切勿相信任何不明網站</h2>
-    <img class="logo" src="Hacker-Club-LOGO.png" alt="Hacker Club LOGO" />
-    <div class="actions">
-      <button class="btn" onclick="window.location.href='logs.html'">查看紀錄</button>
-      <button class="btn" onclick="window.location.href='index.html'">返回首頁</button>
-    </div>
-    <div class="note">提醒您，請隨時保持資安意識，不要在不明頁面輸入帳密。</div>
-  </div>
-</body>
-</html>
-<style>
+  <style>
     :root {
-      --container-width: 960px;
+      --container-width: 1200px;
       --radius: 16px;
     }
 
@@ -37,7 +22,7 @@
 
     .container {
       max-width: var(--container-width);
-      margin: 32px auto;
+      margin: 24px auto;
       background: #fff;
       border-radius: var(--radius);
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
@@ -52,7 +37,8 @@
     }
 
     .logo {
-      max-width: 360px;
+      width: 100%;
+      max-width: 1100px;
       height: auto;
       display: block;
       margin: 16px auto;
@@ -76,9 +62,7 @@
       font-size: 14px;
     }
 
-    .btn:hover {
-      background: #f0f0f0;
-    }
+    .btn:hover { background: #f0f0f0; }
 
     .note {
       margin-top: 16px;
@@ -86,24 +70,50 @@
       color: #777;
     }
 
-    /* RWD 調整 */
+    .readme {
+      max-width: 980px;
+      margin: 24px auto 0;
+      text-align: left;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    .readme h2 {
+      font-size: 20px;
+      margin: 18px 0 10px;
+      color: #007344;
+    }
+
+    .readme h3 {
+      font-size: 17px;
+      margin: 14px 0 8px;
+    }
+
+    .readme ul {
+      padding-left: 20px;
+      margin: 8px 0 12px;
+    }
+
+    .readme li { margin: 4px 0; }
+
     @media (max-width: 1024px) {
       body { padding: 12px; }
       .container {
-        margin: 24px auto;
+        margin: 20px auto;
         padding: 24px 18px;
+        max-width: 1050px;
       }
-      .logo { max-width: 300px; }
+      .logo { max-width: 980px; }
     }
 
     @media (max-width: 768px) {
       .container {
-        margin: 20px auto;
+        margin: 16px auto;
         padding: 22px 16px;
         border-radius: 14px;
       }
       h1 { font-size: 20px; }
-      .logo { max-width: 240px; }
+      .logo { max-width: 720px; }
       .actions {
         flex-direction: column;
         align-items: stretch;
@@ -113,5 +123,60 @@
         font-size: 14px;
       }
       .note { font-size: 12px; }
+      .readme { font-size: 14px; }
     }
   </style>
+</head>
+<body>
+  <div class="container">
+    <h1>登入成功</h1>
+    <h1>登入成功(身為駭客攻防社的社員 你必須擁有資安意識!!)</h1>
+    <h2`>本頁面不會記錄輸入的密碼資料，所有操作都是為了提升社員資安意識，切勿相信任何不明網站</h2>
+    <img class="logo" src="Hacker-Club-LOGO.png" alt="Hacker Club LOGO" />
+    <div class="actions">
+      <button class="btn" onclick="window.location.href='logs.html'">查看紀錄</button>
+      <button class="btn" onclick="window.location.href='index.html'">返回首頁</button>
+    </div>
+    <div class="note">此頁為示範，請隨時留意資安，不要在不明頁面輸入帳密。</div>
+  </div>
+
+  <div class="readme">
+    <h2>🛡️ XiaoZe930705.github.io</h2>
+    <p>國立勤益科技大學｜駭客攻防社｜資訊安全示範教材</p>
+
+    <h3>📚 專案說明</h3>
+    <p>本專案由駭客攻防社建立，作為教學與示範用途，協助成員了解常見攻擊手法、提升資安意識，並學習如何辨識可疑網站或釣魚攻擊。頁面模擬登入情境，僅供演示，不具備真實登入功能。</p>
+
+    <h3>⚠ 重要聲明</h3>
+    <ul>
+      <li>僅限教育、研究、演練用途，不得用於未經授權的測試、攻擊、社交工程或任何有害行為。</li>
+      <li>若將內容用於違法用途，後果自負，與作者及社團無關。</li>
+      <li>嚴禁部署於會誤導一般使用者的環境；進行任何資安測試前請務必取得明確書面授權。</li>
+    </ul>
+
+    <h3>🧩 專案內容</h3>
+    <ul>
+      <li>模擬登入頁面（示範用途，無登入功能）。</li>
+      <li>基礎前端結構：HTML / CSS / JavaScript。</li>
+      <li>可用於演示「使用者為何容易受騙？」並搭配社課講義與口頭解說。</li>
+    </ul>
+
+    <h3>🏫 適用對象</h3>
+    <ul>
+      <li>資安社團成員。</li>
+      <li>想了解社交工程與釣魚攻擊的人。</li>
+      <li>新手練習前端與資安示範頁面製作。</li>
+      <li>教育機構資安防護課程。</li>
+    </ul>
+
+    <h3>🔍 注意事項</h3>
+    <ul>
+      <li>本專案不收集任何真實帳號、密碼或個資。</li>
+      <li>使用者須自行承擔使用後果，作者不負任何法律責任。</li>
+    </ul>
+
+    <h3>📄 授權條款</h3>
+    <p>僅限教育用途。不得用於攻擊、植入惡意程式、騙取他人資料等行為；違者自負其責。</p>
+  </div>
+</body>
+</html>
