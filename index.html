@@ -359,6 +359,24 @@
         max-height: 360px;
       }
     }
+
+    @media (min-width: 1400px) {
+      :root { --hero-height: 360px; }
+      .header-image {
+        width: 90vw;
+        max-width: 1900px;
+      }
+      .main {
+        margin-top: calc(var(--hero-height) * -0.72);
+        gap: 28px;
+      }
+      .login-card {
+        width: 460px;
+      }
+      .notice-card {
+        width: 500px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -555,20 +573,3 @@
   </script>
 </body>
 </html>
-    @media (min-width: 1400px) {
-      :root { --hero-height: 360px; }
-      .header-image {
-        width: 90vw;
-        max-width: 1900px;
-      }
-      .main {
-        margin-top: calc(var(--hero-height) * -0.72);
-        gap: 28px;
-      }
-      .login-card {
-        width: 460px;
-      }
-      .notice-card {
-        width: 500px;
-      }
-    }
